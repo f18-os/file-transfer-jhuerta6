@@ -17,6 +17,7 @@ progname = "echoserver"
 paramMap = params.parseParams(switchesVarDefaults)
 
 listenPort = paramMap['listenPort']
+listenPort = int(listenPort)
 listenAddr = ''       # Symbolic name meaning all available interfaces
 
 if paramMap['usage']:
