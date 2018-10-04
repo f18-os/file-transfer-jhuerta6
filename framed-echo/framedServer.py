@@ -38,5 +38,6 @@ while True:
     if debug: print("rec'd: ", payload)
     if not payload:
         break
+    if payload.decode() == "exit": exit()
     payload += b"!"             # make emphatic!
     framedSend(sock, payload, debug)

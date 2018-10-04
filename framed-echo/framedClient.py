@@ -65,3 +65,9 @@ print("sending hello world")
 framedSend(s, b"hello world", debug)
 print("received:", framedReceive(s, debug))
 
+while 1:
+    user_msg = input().encode()
+    if user_msg.decode() == "exit": exit()
+    framedSend(s, user_msg, debug)
+    print("received:", framedReceive(s, debug))
+
